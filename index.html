@@ -1,45 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Práctico - 1° parte 💻</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title> ARCANA | Objetos, aromas y curiosidades</title>
 </head>
+
 <body>
-    <h1> E-Commerce ❤️ </h1>
-    <h2> 1° Parte del práctico </h2>
-    <br>
-    <h4> Formulario de registro </h4>
-    <p>Complete con sus datos correctamente</p>
-    <form action="" method="post">
-        <label for="nombre"> Nombre completo : </label>
-        <input type="text" id="name" name="name">
-        <br>
-        <br>
-        <label for="apellido"> Apellido : </label>
-        <input type="text" name="apellido" id="apellido">
-        <br>
-        <br>
-        <label for="nacimiento"> Fecha de nacimiento : </label>
-        <input type="date" name="date" id="date">
-        <br>
-        <br>
-        <label for="mail"> Mail : </label>
-        <input type="text" name="mail" id="mail">
-        <br>
-        <br>
-        <label for="contraseña"> Contraseña : </label>
-        <input type="password" name="password" id="password">
-        <br>
-        <br>       
-        <button type="submit"> Enviar </button>
-    </form>
-     <h4> Listado de apartados </h4>
-        <ol>
-            <a href="apartado1.html"><li> Opción 1 🩵</li></a>
-            <a href="apartado2.html"><li> Opción 2 🧡</li></a>
-            <a href="apartado3.html"><li> Opción 3 💚</li></a>
-            <a href="apartado4.html"><li> Opción 4 💜 </li></a>
-        </ol>
+    <!--Navbar-->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span>☾</span>
+            ARCANA
+        </a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#productos">Colección</a>
+            <a href="apartado2.html">Alquimia</a>
+            <a href="apartado3.html">Astral</a>
+            <a href="apartado4.html">Nosotros</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="#" aria-label="Buscar">🔍</a>
+            <a href="login.html" aria-label="Usuario">👤</a>
+            <a href="#" aria-label="Carrito">🛒</a>
+        </div>
+    </header>
+    <!-- HERO -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle"> OBJETOS - AROMAS - CURIOSIDADES </p>
+                <h1> Descubre <br>
+                    Lo extraordinario
+                </h1>
+                <p class="hero-text"> Objetos, aromas y curiosidades
+                    para quienes encuentran magia en los pequeños detalles</p>
+
+                <a href="#productos" class="btn-primary"> Explorar colección </a>
+            </div>
+        </section>
+
+        <!-- Sección de productos -->
+        <section class="productos" id="productos">
+            <div class="productos-header">
+                <p>DESCRUBRÍ ARCANA</p>
+                <h2>Productos destacados</h2>
+            </div>
+
+            <div class="productos-grid">
+                <!--Card del prod-->
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="imagen/vela-lunar-webp.webp" alt="Vela Lunar">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Vela Lunar</h3>
+                        <p class="producto-descripcion"> Vela aromática de lavanda y madera</p>
+                        <p class="producto-precio">$10.500</p>
+                        <button type="button"> Agregar al carrito </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="imagen/taza.webp" alt="Taza arcana" class="imagen-taza">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Taza Arcana</h3>
+                        <p class="producto-descripcion">Cerámica artesanal inspirada en la naturaleza.</p>
+                        <p class="producto-precio">$12.800</p>
+                        <button type="button">Agregar al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

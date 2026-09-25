@@ -1,0 +1,430 @@
+/*paleta general*/
+
+:root {
+    --verde-bosque: #26352D;
+    --verde-musgo: #596B59;
+    --verde-salvia: #8A9B7D;
+    --crema: #E9E1D2;
+    --marfil: #F5F1E8;
+    --terracota: #A67C52;
+    --oro: #B99A61;
+    --marron: #3A2F24;
+    --lavanda: #75618F;
+}
+
+/* config gral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--verde-bosque);
+    color: var(--marfil);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/*Navbar*/ 
+.navbar {
+    height: 80px;
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--verde-bosque);
+    border-bottom: 1px solid var(--oro);
+}
+
+
+/*Loguito */
+
+.logo {
+    color: var(--crema);
+    text-decoration: none;
+
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+.logo span {
+    color: var(--oro);
+    font-size: 24px;
+}
+
+/* Links */
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: var(--marfil);
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: color 0.3s ease;
+}
+.navbar nav a:hover {
+    color: var(--oro);
+}
+
+/* Iconoss */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-icons a {
+    color: var(--marfil);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-icons a:first-child {
+    font-size: 28px;
+}
+
+.nav-icons a:hover {
+    transform: translateY(-2px);
+}
+
+.nav-icons a:first-child:hover {
+    color: var(--oro);
+}
+/* HERO */
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(38, 53, 45, 0.92) 0%,
+            rgba(38, 53, 45, 0.55) 45%,
+            rgba(38, 53, 45, 0.15) 100%
+        ),
+        url("../imagen/hero-arcana-webp.webp");
+
+    background-size: cover;
+    background-position: center;
+}
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-subtitle {
+    margin-bottom: 20px;
+    color: var(--oro);
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+    color: var(--crema);
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.hero-text {
+    max-width: 500px;
+    margin-bottom: 35px;
+    color: var(--marfil);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Btn principal */
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--verde-musgo);
+    color: var(--marfil);
+    border: 1px solid var(--oro);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-salvia);
+    color: var(--marron);
+}
+
+/* Login */
+.login {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--crema);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 45px;
+    background-color: var(--marfil);
+    border: 1px solid var(--oro);
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(38, 53, 45, 0.15);
+}
+
+.login-subtitle {
+    margin-bottom: 12px;
+    color: var(--oro);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.login-card h1 {
+    margin-bottom: 15px;
+    color: var(--verde-bosque);
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.login-text {
+    margin-bottom: 30px;
+    color: var(--marron);
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--verde-bosque);
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 14px;
+    background-color: white;
+    color: var(--marron);
+    border: 1px solid var(--verde-salvia);
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+.form-group input:focus {
+    border-color: var(--oro);
+}
+
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: var(--verde-bosque);
+    color: var(--marfil);
+    border: 1px solid var(--oro);
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login-card button:hover {
+    background-color: var(--verde-musgo);
+    color: var(--marfil);
+}
+.login-register {
+    margin-top: 25px;
+    color: var(--marron);
+    font-size: 14px;
+    text-align: center;
+}
+.login-register a {
+    color: var(--verde-bosque);
+    font-weight: bold;
+    text-decoration: none;
+}
+.login-register a:hover {
+    color: var(--oro);
+}
+
+/* REGISSTRO */ 
+
+.registro {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--crema);
+}
+.registro-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 45px;
+    background-color: var(--marfil);
+    border: 1px solid var(--oro);
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(38, 53, 45, 0.15);
+}
+.registro-subtitle {
+    margin-bottom: 12px;
+    color: var(--oro);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.registro-card h1 {
+    margin-bottom: 15px;
+    color: var(--verde-bosque);
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+}
+.registro-text {
+    margin-bottom: 30px;
+    color: var(--marron);
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.registro-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: var(--verde-bosque);
+    color: var(--marfil);
+    border: 1px solid var(--oro);
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.registro-card button:hover {
+    background-color: var(--verde-musgo);
+    color: var(--marfil);
+}
+
+.registro-login {
+    margin-top: 25px;
+    color: var(--marron);
+    font-size: 14px;
+    text-align: center;
+}
+
+.registro-login a {
+    color: var(--verde-bosque);
+    font-weight: bold;
+    text-decoration: none;
+}
+.registro-login a:hover {
+    color: var(--oro);
+}
+
+/* SECCION-PRODUCTOS */
+
+.productos {
+    padding: 70px 60px;
+    background-color: var(--verde-bosque);
+}
+.productos-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.productos-header p {
+    margin-bottom: 10px;
+    color: var(--oro);
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.productos-header h2 {
+    color: var(--crema);
+    font-size: 38px;
+    font-weight: normal;
+}
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto-card {
+    overflow: hidden;
+    background-color: var(--crema);
+    border: 4px solid var(--oro);
+    border-radius: 20px;
+}
+.producto-imagen {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.producto-info {
+    padding: 20px;
+}
+.producto-info h3 {
+    margin-bottom: 8px;
+    color: var(--verde-bosque);
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.producto-descripcion {
+    margin-bottom: 15px;
+    color: var(--marron);
+    font-size: 14px;
+    line-height: 1.5;
+}
+.producto-precio {
+    margin-bottom: 18px;
+    color: var(--marron);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.producto-info button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--verde-musgo);
+    color: var(--marfil);
+    border: 1px solid var(--oro);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.producto-info button:hover {
+    background-color: var(--verde-salvia);
+    color: var(--marron);
+}
+
