@@ -24,11 +24,17 @@ body {
     font-family: Georgia, 'Times New Roman', serif;
 }
 
+.logo,
+h1,
+h2,
+h3 {
+    font-family: 'Cinzel', serif;
+}
+
 /*Navbar*/ 
 .navbar {
     height: 80px;
     padding: 0 60px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,13 +50,13 @@ body {
     color: var(--crema);
     text-decoration: none;
 
-    font-size: 28px;
+    font-size: 35px;
     letter-spacing: 4px;
     font-weight: bold;
 }
 .logo span {
     color: var(--oro);
-    font-size: 24px;
+    font-size: 35px;
 }
 
 /* Links */
@@ -63,9 +69,8 @@ body {
 .navbar nav a {
     color: var(--marfil);
     text-decoration: none;
-
-    font-size: 16px;
-
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
     transition: color 0.3s ease;
 }
 .navbar nav a:hover {
@@ -90,17 +95,13 @@ body {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.nav-icons a:first-child {
-    font-size: 28px;
-}
-
 .nav-icons a:hover {
     transform: translateY(-2px);
 }
-
-.nav-icons a:first-child:hover {
+.nav-icons a:hover {
     color: var(--oro);
 }
+
 /* HERO */
 .hero {
     min-height: 650px;
@@ -346,6 +347,24 @@ body {
 .productos {
     padding: 70px 60px;
     background-color: var(--verde-bosque);
+    position: relative;
+    overflow: hidden;
+}
+.productos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../imagen/constelaciones-fondo.webp");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.20;
+    pointer-events: none;
+}
+.productos-header,
+.productos-grid {
+    position: relative;
+    z-index: 1;
 }
 .productos-header {
     margin-bottom: 40px;
@@ -426,5 +445,106 @@ body {
 .producto-info button:hover {
     background-color: var(--verde-salvia);
     color: var(--marron);
+}
+
+/* --- FOOTER --- */
+
+.footer {
+    background-color: var(--verde-musgo);
+    color: var(--marfil);
+    padding: 50px 5% 20px;
+    margin-top: 100px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Marca */
+
+.footer-marca {
+    transform: translateX(-100px);
+}
+
+.footer-marca h3 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.footer-marca h3 i {
+    color: var(--oro);
+    margin-right: 3px;
+}
+
+.footer-marca p {
+    margin: 0;
+    color: var(--crema);
+    font-size: 20px;
+}
+
+/* Enlaces */
+
+.footer-enlaces {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-enlaces a {
+    color: var(--marfil);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: var(--oro);
+}
+
+/* Redes */
+
+.footer-redes {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-redes a {
+    color: var(--marfil);
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-redes a:hover {
+    color: var(--oro);
+    transform: translateY(-2px);
+}
+
+/* Copyright */
+
+.footer-copy {
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+    transform: translateX(100px);
+}
+
+.footer-copy p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: var(--crema);
+}
+
+.footer-corazon {
+    color: var(--oro);
+    margin-left: 10px;
+    font-size: 0.85em;
 }
 
