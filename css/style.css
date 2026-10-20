@@ -342,101 +342,6 @@ h3 {
     color: var(--oro);
 }
 
-/* SECCION-PRODUCTOS */
-
-.productos {
-    padding: 70px 60px;
-    background-color: var(--verde-bosque);
-    position: relative;
-    overflow: hidden;
-}
-
-.productos-header,
-.productos-grid {
-    position: relative;
-    z-index: 1;
-}
-.productos-header {
-    margin-bottom: 40px;
-    text-align: center;
-}
-.productos-header p {
-    margin-bottom: 10px;
-    color: var(--oro);
-    font-size: 13px;
-    letter-spacing: 3px;
-}
-
-.productos-header h2 {
-    color: var(--crema);
-    font-size: 38px;
-    font-weight: normal;
-}
-.productos-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.producto-card {
-    overflow: hidden;
-    background-color: var(--crema);
-    border: 4px solid var(--oro);
-    border-radius: 20px;
-}
-.producto-imagen {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-}
-
-.producto-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.producto-info {
-    padding: 20px;
-}
-.producto-info h3 {
-    margin-bottom: 8px;
-    color: var(--verde-bosque);
-    font-size: 22px;
-    font-weight: normal;
-}
-
-.producto-descripcion {
-    margin-bottom: 15px;
-    color: var(--marron);
-    font-size: 14px;
-    line-height: 1.5;
-}
-.producto-precio {
-    margin-bottom: 18px;
-    color: var(--marron);
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.producto-info button {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--verde-musgo);
-    color: var(--marfil);
-    border: 1px solid var(--oro);
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.producto-info button:hover {
-    background-color: var(--verde-salvia);
-    color: var(--marron);
-}
-
 /* --- FOOTER --- */
 
 .footer {
@@ -568,4 +473,26 @@ h3 {
 
 #btn-cerrar-sesion:hover {
     color: var(--oro);
+}
+
+
+#btn-carrito {
+    position: relative;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--oro);
+    color: var(--verde-bosque);
+    font-size: 11px;
+    font-weight: bold;
 }

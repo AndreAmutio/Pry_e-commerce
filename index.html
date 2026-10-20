@@ -11,6 +11,8 @@
     <!--boots-icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -22,7 +24,7 @@
             <span><i class="bi bi-moon-stars-fill"></i></span>
             ARCANA
         </a>
-       <nav id="navbar-links"></nav>
+        <nav id="navbar-links"></nav>
 
         <div class="nav-icons">
             <a href="#" aria-label="Buscar">
@@ -31,8 +33,9 @@
             <a href="./login.html" aria-label="Usuario">
                 <i class="bi bi-person"></i>
             </a>
-            <a href="#" aria-label="Carrito">
+            <a href="#" id="btn-carrito" aria-label="Carrito">
                 <i class="bi bi-cart"></i>
+                <span id="contador-carrito">0</span>
             </a>
             <a href="#" id="btn-cerrar-sesion">Cerrar sesión</a>
         </div>
@@ -61,32 +64,7 @@
                 <h2>Productos destacados</h2>
             </div>
 
-            <div class="productos-grid">
-                <!--Card del prod-->
-                <article class="producto-card">
-                    <div class="producto-imagen">
-                        <img src="imagen/vela-lunar-webp.webp" alt="Vela Lunar">
-                    </div>
-                    <div class="producto-info">
-                        <h3>Vela Lunar</h3>
-                        <p class="producto-descripcion"> Vela aromática de lavanda y madera</p>
-                        <p class="producto-precio">$10.500</p>
-                        <button type="button"> Agregar al carrito </button>
-                    </div>
-                </article>
-
-                <article class="producto-card">
-                    <div class="producto-imagen">
-                        <img src="imagen/taza.webp" alt="Taza arcana" class="imagen-taza">
-                    </div>
-                    <div class="producto-info">
-                        <h3>Taza Arcana</h3>
-                        <p class="producto-descripcion">Cerámica artesanal inspirada en la naturaleza.</p>
-                        <p class="producto-precio">$12.800</p>
-                        <button type="button">Agregar al carrito</button>
-                    </div>
-                </article>
-            </div>
+            <div class="productos-grid" id="productos-grid"></div>
         </section>
     </main>
 
@@ -124,9 +102,12 @@
             </div>
         </div>
     </footer>
-    
-<script src="./js/navbar.js"></script>
-<script src="./js/logout.js"></script>
+
+    <script src="./js/productos.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/carrito.js"></script>
 
 </body>
+
 </html>
