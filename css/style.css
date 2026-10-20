@@ -350,17 +350,7 @@ h3 {
     position: relative;
     overflow: hidden;
 }
-.productos::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("../imagen/constelaciones-fondo.webp");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.20;
-    pointer-events: none;
-}
+
 .productos-header,
 .productos-grid {
     position: relative;
@@ -548,3 +538,20 @@ h3 {
     font-size: 0.85em;
 }
 
+/* Enlace para iniciar sesión desde la página de registro */
+.registro-login {
+    margin-top: 25px;
+    color: var(--marron);
+    font-size: 14px;
+    text-align: center;
+}
+
+.registro-login a {
+    color: var(--verde-bosque);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.registro-login a:hover {
+    color: var(--oro);
+}
