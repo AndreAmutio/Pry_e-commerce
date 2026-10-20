@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | ARCANA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/productos.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="./index.html" class="logo">
+            <span><i class="bi bi-moon-stars-fill"></i></span>
+            ARCANA
+        </a>
+        <nav id="navbar-links"></nav>
+
+        <div class="nav-icons">
+            <a href="#" aria-label="Buscar">
+                <i class="bi bi-search"></i>
+            </a>
+
+            <a href="./login.html" aria-label="Usuario">
+                <i class="bi bi-person"></i>
+            </a>
+
+            <a href="./carrito.html" id="btn-carrito" aria-label="Carrito">
+                <i class="bi bi-cart"></i>
+                <span id="contador-carrito">0</span>
+            </a>
+
+            <a href="#" id="btn-cerrar-sesion"> Cerrar sesión </a>
+        </div>
+    </header>
+
+    <main class="carrito">
+        <h1>Tu carrito</h1>
+        <p>Los productos que elegiste para tu colección.</p>
+
+        <div id="lista-carrito"></div>
+
+        <div class="carrito-resumen">
+            <p> Total: <strong id="total-carrito">$0</strong></p>
+            <button type="button" id="vaciar-carrito">
+                Vaciar carrito
+            </button>
+        </div>
+    </main>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/vista-carrito.js"></script>
+</body>
+</html>
