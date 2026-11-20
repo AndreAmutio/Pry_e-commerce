@@ -1,13 +1,13 @@
 const productos = [
     {
         nombre: "Vela Lunar",
-        imagen: "imagen/vela-lunar-webp.webp",
+        imagen: "../imagen/vela-lunar-webp.webp",
         descripcion: "Vela aromática de lavanda y madera.",
         precio: 10500
     },
     {
         nombre: "Taza Arcana",
-        imagen: "imagen/taza.webp",
+        imagen: "../imagen/taza.webp",
         descripcion: "Cerámica artesanal inspirada en la naturaleza.",
         precio: 12800
     },
