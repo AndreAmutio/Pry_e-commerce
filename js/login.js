@@ -1,9 +1,25 @@
 const formularioLogin = document.getElementById("form-login");
 
-formularioLogin.addEventListener("submit", function (event) {
-    event.preventDefault();
+if (formularioLogin) {
+    formularioLogin.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    sessionStorage.setItem("sesionIniciada", "true");
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
 
-    window.location.href = "./index.html";
-});
+        if (!email || !password) {
+            alert("Por favor, completá todos los campos.");
+            return;
+        }
+
+        // me guarda datos de sesión del usuario
+        const usuario = {
+            email: email
+        };
+
+        sessionStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
+        sessionStorage.setItem("sesionIniciada", "true");
+
+        window.location.href = "./index.html";
+    });
+}

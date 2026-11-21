@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Vela Lunar",
+    "categoria": "Alquimia",
+    "imagen": "../imagen/vela-lunar-webp.webp",
+    "descripcion": "Vela aromática de lavanda y madera.",
+    "precio": 10500
+  },
+  {
+    "id": 2,
+    "nombre": "Sahumerios Místicos",
+    "categoria": "Alquimia",
+    "imagen": "",
+    "descripcion": "Aromas para acompañar tus momentos de calma.",
+    "precio": 7500
+  },
+  {
+    "id": 3,
+    "nombre": "Cuenco de Alquimia",
+    "categoria": "Alquimia",
+    "imagen": "",
+    "descripcion": "Un detalle artesanal para tu espacio personal.",
+    "precio": 14500
+  },
+  {
+    "id": 4,
+    "nombre": "Piedras Energéticas",
+    "categoria": "Alquimia",
+    "imagen": "",
+    "descripcion": "Una selección de amatista, cuarzo rosa y cuarzo transparente.",
+    "precio": 9800
+  },
+  {
+    "id": 5,
+    "nombre": "Taza Arcana",
+    "categoria": "Astral",
+    "imagen": "../imagen/taza.webp",
+    "descripcion": "Cerámica artesanal inspirada en la naturaleza.",
+    "precio": 12800
+  },
+  {
+    "id": 6,
+    "nombre": "Cristal Lunar",
+    "categoria": "Astral",
+    "imagen": "",
+    "descripcion": "Una pieza inspirada en la energía de la luna.",
+    "precio": 9200
+  },
+  {
+    "id": 7,
+    "nombre": "Amuleto Astral",
+    "categoria": "Astral",
+    "imagen": "",
+    "descripcion": "Un accesorio inspirado en los astros y las estrellas.",
+    "precio": 8900
+  },
+  {
+    "id": 8,
+    "nombre": "Oráculo de la Luna",
+    "categoria": "Astral",
+    "imagen": "",
+    "descripcion": "Un mazo de cartas inspirado en las fases lunares y la simbología astral.",
+    "precio": 14200
+  }
+]

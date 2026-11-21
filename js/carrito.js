@@ -1,6 +1,4 @@
 const contadorCarrito = document.getElementById("contador-carrito");
-const botonesAgregar = document.querySelectorAll(".btn-agregar-carrito");
-
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function actualizarContadorCarrito() {
@@ -12,41 +10,39 @@ function actualizarContadorCarrito() {
         contadorCarrito.textContent = totalUnidades;
     }
 }
+// Detecto clickss en los btn de las cards
+document.addEventListener("click", function (event) {
+    const boton = event.target.closest(".btn-agregar-carrito");
 
-botonesAgregar.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-        const tarjeta = boton.closest(".producto-card");
+    if (!boton) {
+        return;
+    }
+    const tarjeta = boton.closest(".producto-card");
+    const nombre = tarjeta.querySelector("h3").textContent;
+    const precioTexto = tarjeta.querySelector(".producto-precio").textContent;
+    const precio = Number(
+        precioTexto.replace("$", "").replace(/\./g, "").trim()
+    );
 
-        const nombre = tarjeta.querySelector("h3").textContent;
-        const precioTexto = tarjeta.querySelector(".producto-precio").textContent;
-        const precio = Number(
-            precioTexto.replace("$", "").replace(/\./g, "").trim()
-        );
+    const cantidad = Number(
+        tarjeta.querySelector(".cantidad").textContent
+    );
 
-        const cantidad = Number(
-            tarjeta.querySelector(".cantidad").textContent
-        );
-
-        const productoExistente = carrito.find(function (producto) {
-            return producto.nombre === nombre;
-        });
-
-        if (productoExistente) {
-            productoExistente.cantidad += cantidad;
-        } else {
-            carrito.push({
-                nombre: nombre,
-                precio: precio,
-                cantidad: cantidad
-            });
-        }
-
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-
-        actualizarContadorCarrito();
-
-        alert(nombre + " se agregó al carrito.");
+    const productoExistente = carrito.find(function (producto) {
+        return producto.nombre === nombre;
     });
-});
 
+    if (productoExistente) {
+        productoExistente.cantidad += cantidad;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: cantidad
+        });
+    }
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarContadorCarrito();
+    alert(nombre + " se agregó al carrito.");
+});
 actualizarContadorCarrito();

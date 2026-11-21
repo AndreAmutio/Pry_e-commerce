@@ -18,6 +18,18 @@ function formatearPrecio(precio) {
     });
 }
 
+function actualizarContador() {
+    const carrito = obtenerCarrito();
+    const totalUnidades = carrito.reduce(function (total, producto) {
+        return total + producto.cantidad;
+    }, 0);
+
+    const contador = document.getElementById("contador-carrito");
+
+    if (contador) {
+        contador.textContent = totalUnidades;
+    }
+}
 function mostrarCarrito() {
     const carrito = obtenerCarrito();
 
@@ -26,9 +38,9 @@ function mostrarCarrito() {
     if (carrito.length === 0) {
         listaCarrito.innerHTML = "<p>Tu carrito está vacío.</p>";
         totalCarrito.textContent = formatearPrecio(0);
+        actualizarContador();
         return;
     }
-
     let total = 0;
 
     carrito.forEach(function (producto, indice) {
@@ -47,7 +59,7 @@ function mostrarCarrito() {
             </div>
 
             <button type="button" class="btn-eliminar" data-indice="${indice}">
-                Eliminar
+                Eliminar una unidad
             </button>
         `;
 
@@ -55,7 +67,6 @@ function mostrarCarrito() {
     });
 
     totalCarrito.textContent = formatearPrecio(total);
-
     const botonesEliminar = listaCarrito.querySelectorAll(".btn-eliminar");
 
     botonesEliminar.forEach(function (boton) {
@@ -63,17 +74,24 @@ function mostrarCarrito() {
             const indice = Number(boton.dataset.indice);
             const carritoActual = obtenerCarrito();
 
-            carritoActual.splice(indice, 1);
+            if (carritoActual[indice].cantidad > 1) {
+                carritoActual[indice].cantidad--;
+            } else {
+                carritoActual.splice(indice, 1);
+            }
 
             guardarCarrito(carritoActual);
             mostrarCarrito();
         });
     });
+
+    actualizarContador();
 }
 
-botonVaciar.addEventListener("click", function () {
-    localStorage.removeItem("carrito");
-    mostrarCarrito();
-});
-
+if (botonVaciar) {
+    botonVaciar.addEventListener("click", function () {
+        localStorage.removeItem("carrito");
+        mostrarCarrito();
+    });
+}
 mostrarCarrito();
