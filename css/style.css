@@ -18,10 +18,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: var(--verde-bosque);
     color: var(--marfil);
     font-family: Georgia, 'Times New Roman', serif;
+}
+main {
+    padding-top: 80px;
 }
 
 .logo,
@@ -31,9 +35,14 @@ h3 {
     font-family: 'Cinzel', serif;
 }
 
-/*Navbar*/ 
+/*Navbar*/
 .navbar {
     height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     padding: 0 60px;
     display: flex;
     align-items: center;
@@ -54,6 +63,7 @@ h3 {
     letter-spacing: 4px;
     font-weight: bold;
 }
+
 .logo span {
     color: var(--oro);
     font-size: 35px;
@@ -73,6 +83,7 @@ h3 {
     font-size: 20px;
     transition: color 0.3s ease;
 }
+
 .navbar nav a:hover {
     color: var(--oro);
 }
@@ -98,6 +109,7 @@ h3 {
 .nav-icons a:hover {
     transform: translateY(-2px);
 }
+
 .nav-icons a:hover {
     color: var(--oro);
 }
@@ -110,17 +122,16 @@ h3 {
     padding: 80px;
 
     background-image:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             rgba(38, 53, 45, 0.92) 0%,
             rgba(38, 53, 45, 0.55) 45%,
-            rgba(38, 53, 45, 0.15) 100%
-        ),
+            rgba(38, 53, 45, 0.15) 100%),
         url("../imagen/hero-arcana-webp.webp");
 
     background-size: cover;
     background-position: center;
 }
+
 .hero-content {
     max-width: 650px;
 }
@@ -140,6 +151,7 @@ h3 {
     font-weight: normal;
     text-transform: uppercase;
 }
+
 .hero-text {
     max-width: 500px;
     margin-bottom: 35px;
@@ -195,6 +207,7 @@ h3 {
     letter-spacing: 3px;
     text-align: center;
 }
+
 .login-card h1 {
     margin-bottom: 15px;
     color: var(--verde-bosque);
@@ -210,9 +223,11 @@ h3 {
     line-height: 1.6;
     text-align: center;
 }
+
 .form-group {
     margin-bottom: 20px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 8px;
@@ -230,6 +245,7 @@ h3 {
     font-size: 15px;
     outline: none;
 }
+
 .form-group input:focus {
     border-color: var(--oro);
 }
@@ -247,26 +263,30 @@ h3 {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .login-card button:hover {
     background-color: var(--verde-musgo);
     color: var(--marfil);
 }
+
 .login-register {
     margin-top: 25px;
     color: var(--marron);
     font-size: 14px;
     text-align: center;
 }
+
 .login-register a {
     color: var(--verde-bosque);
     font-weight: bold;
     text-decoration: none;
 }
+
 .login-register a:hover {
     color: var(--oro);
 }
 
-/* REGISSTRO */ 
+/* REGISSTRO */
 
 .registro {
     min-height: calc(100vh - 80px);
@@ -276,6 +296,7 @@ h3 {
     padding: 60px 20px;
     background-color: var(--crema);
 }
+
 .registro-card {
     width: 100%;
     max-width: 500px;
@@ -285,6 +306,7 @@ h3 {
     border-radius: 6px;
     box-shadow: 0 15px 40px rgba(38, 53, 45, 0.15);
 }
+
 .registro-subtitle {
     margin-bottom: 12px;
     color: var(--oro);
@@ -292,6 +314,7 @@ h3 {
     letter-spacing: 3px;
     text-align: center;
 }
+
 .registro-card h1 {
     margin-bottom: 15px;
     color: var(--verde-bosque);
@@ -299,6 +322,7 @@ h3 {
     font-weight: normal;
     text-align: center;
 }
+
 .registro-text {
     margin-bottom: 30px;
     color: var(--marron);
@@ -338,6 +362,7 @@ h3 {
     font-weight: bold;
     text-decoration: none;
 }
+
 .registro-login a:hover {
     color: var(--oro);
 }
@@ -461,7 +486,7 @@ h3 {
     color: var(--oro);
 }
 
-/* BTN CERRAR SESION */ 
+/* BTN CERRAR SESION */
 
 #btn-cerrar-sesion {
     display: none;
